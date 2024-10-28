@@ -1,10 +1,16 @@
 ## T5 트랜스포머 모델임 <br>
 번역과 요약에 좀 특화됬다고함. <br>
 
+깃 클론해서 가져가세요.<br>
+> ```git clone https://github.com/choimagon/2024-02-Sejong-AF.git``` <br>
+
+## 데이터셋  <br>
 데이터셋 (법률 데이터 요약) : https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=71794   <br>
 -> 법률 데이터 요약을 사용함으로써 내용 요약에 좀 더 신뢰도 높을 거 같음. <br>
+데이터셋 (국제 학술대회용 전문분야 한영/영한 통번역 데이터) : https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=&topMenu=&aihubDataSe=data&dataSetSn=71693 <br>
+-> 전문용어가 많이 나오는 데이터가 좀 더 신뢰도 있을거같음. <br>
 
-ex) 데이터셋 (json파일인데 -> 이거 csv 바꿔서, data파일에 넣어둠)
+ex) 요약 데이터셋 (json파일인데 -> 이거 csv 바꿔서, data파일에 넣어둠)
 ```
 {
   "id": "1037_1958",
@@ -25,4 +31,31 @@ ex) 데이터셋 (json파일인데 -> 이거 csv 바꿔서, data파일에 넣어
   "disposal": "임기만료폐기"
 }
 
+```
+
+ex) 번역 데이터셋 (json파일인데 -> 이거 csv 바꿔서, data파일에 넣어둠)
+```
+{
+    "sn": "EKEA100000002",
+    "file_name": "E_EA_10001.wav",
+    "file_format": ".wav",
+    "audio_duration": "00:14:12.533",
+    "audio_start": "00:00:05.283",
+    "audio_end": "00:00:15.622",
+    "conf_name": null,
+    "domain": "공학",
+    "subdomain": "토목공학",
+    "info_place": null,
+    "info_date": "2023",
+    "info_gender": "male",
+    "info_age": 50,
+    "source_original": "-",
+    "source_cleaned": "Interdisciplinarity: Is there room for It in undergraduate engineering education's futures?",
+    "source_language": "en",
+    "target_language": "ko",
+    "MT": "학제간: 학부 공학 교육의 미래에 그것이 들어갈 여지가 있습니까?",
+    "MTPE": "학제간 연구: 학부 공학 교육의 미래에 학제간 연구의 여지가 존재하는가.",
+    "final_audio_duration": "00:12:37.095",
+    "license": true
+},
 ```
