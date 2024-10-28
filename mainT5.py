@@ -2,22 +2,26 @@ import pandas as pd
 import torch
 from sklearn.model_selection import train_test_split
 from transformers import T5Tokenizer, T5ForConditionalGeneration, Trainer, TrainingArguments
+import warnings
+# 경고창 숨기기
+warnings.filterwarnings('ignore') 
 
-
-df123 = pd.read_csv("output.csv")
+df123 = pd.read_csv("data/sample_trans.csv")
 df123 = df123.dropna()
 
 #이거 학습 데이터 많으면 오래걸림 줄여야함.
-df = df123.head(2000)
+df = df123.head(20)
 
 train_df, val_df = train_test_split(df, test_size=0.1)
+
+print(f"\033[92m Data Check\033[0m") 
 
 tokenizer = T5Tokenizer.from_pretrained('digit82/kolang-t5-base')
 model = T5ForConditionalGeneration.from_pretrained('digit82/kolang-t5-base')
 
 class CustomDataset(torch.utils.data.Dataset):
     # 토큰 인풋 아웃풋 좀 조절해야함. 안하면 ㅈ됌
-    def __init__(self, dataframe, tokenizer, max_input_length=550, max_target_length=150):
+    def __init__(self, dataframe, tokenizer, max_input_length=200, max_target_length=150):
         self.data = dataframe
         self.tokenizer = tokenizer
         self.max_input_length = max_input_length
@@ -27,8 +31,8 @@ class CustomDataset(torch.utils.data.Dataset):
         return len(self.data)
 
     def __getitem__(self, index):
-        context = str(self.data.iloc[index]["context"])
-        summary = str(self.data.iloc[index]["summary"])
+        context = str(self.data.iloc[index]["source_cleaned"])
+        summary = str(self.data.iloc[index]["MTPE"])
 
         input_encoding = self.tokenizer(
             context,
@@ -80,4 +84,4 @@ trainer = Trainer(
 trainer.train()
 
 trainer.evaluate()
-print("check")
+print(f"\033[92m model train End\033[0m") 
