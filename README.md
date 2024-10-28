@@ -4,7 +4,7 @@
 데이터셋 (법률 데이터 요약) : https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=71794   <br>
 -> 법률 데이터 요약을 사용함으로써 내용 요약에 좀 더 신뢰도 높을 거 같음. <br>
 
-ex) 데이터셋 (json파일인데 -> 이거 csv 파일로 바꿀거임)
+ex) 데이터셋 (json파일인데 -> 이거 csv 바꿔서, data파일에 넣어둠)
 ```
 {
   "id": "1037_1958",
