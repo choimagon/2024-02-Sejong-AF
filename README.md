@@ -2,7 +2,7 @@
 번역과 요약에 좀 특화됬다고함. <br>
 
 깃 클론해서 가져가세요.<br>
-> git clone https://github.com/choimagon/2024-02-Sejong-AF.git
+> ```git clone https://github.com/choimagon/2024-02-Sejong-AF.git```
 
 데이터셋 (법률 데이터 요약) : https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=71794   <br>
 -> 법률 데이터 요약을 사용함으로써 내용 요약에 좀 더 신뢰도 높을 거 같음. <br>
