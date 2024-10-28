@@ -20,7 +20,7 @@ def extract_to_csv(folder_path, output_csv_path):
     
     df.to_csv(output_csv_path, index=False, encoding='utf-8-sig')
 
-folder_path = '/Users/choejihun/Hacksul/Sample/02.라벨링데이터/그룹1/19'
+folder_path = '/Users/choejihun/HakSul/Sample_summary/02.라벨링데이터/그룹1/19'
 output_csv_path = 'data/sample.csv'
 
 extract_to_csv(folder_path, output_csv_path)
