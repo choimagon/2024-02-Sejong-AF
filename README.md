@@ -73,7 +73,10 @@ ex) 번역 데이터셋 (json파일인데 -> 이거 csv 바꿔서, data파일에
 >  ```csvView.py : csv파일의 일부를 보여주는 코드(그냥 궁금하면 확인하는 용도)```<br>
 >  ```trans-json2csv.py,  trans-Trans_json2csv.p: 학습 데이터의 원본은 json 파일인데 필요한 부분만 가져와서 csv파일로 변환해주는 파일```<br>
 
-90개의 데이터로 40번 학습 돌렸을때의 결과 (나쁘지않은데 아마 과적합일거임->본 학술제로 들어가는 순간 제대로 학습해야징)
+번역 모델 : 90개의 데이터로 40번 학습 돌렸을때의 결과 (나쁘지않은데 아마 과적합일거임->본 학술제로 들어가는 순간 제대로 학습해야징)
 ![image](https://github.com/user-attachments/assets/22a5b23e-3232-4294-9def-18f97164cc2f)
+
+요약 모델 
+![image](https://github.com/user-attachments/assets/faa3a5dc-b37e-444a-a560-0f900b03fcfa)
 
 
