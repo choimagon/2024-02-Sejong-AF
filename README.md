@@ -64,7 +64,8 @@ ex) 번역 데이터셋 (json파일인데 -> 이거 csv 바꿔서, data파일에
 > 폴더 : data <br>
 > ```data :  학습에 필요한 데이터셋을 csv로 변환해둠(현재 sample만 csv로 만들어둠)``` <br>
 > 원본 data는 용량 문제로 업로드 안됌 <br>
-<br>
+
+
 >  python 파일 : mainT5.py, classT5.py, useClassT5.py, csvView.py, trans-json2csv.py, trans-Trans_json2csv.py <br>
 >  ```mainT5.py : 학습할때 사용하는 T5 모델 코드``` <br>
 >  ```classT5.py : 실제 학습된 T5모델을 가져오기위해 만든 class(그냥 클래스 선언만 있는거)``` <br>
