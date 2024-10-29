@@ -59,3 +59,21 @@ ex) 번역 데이터셋 (json파일인데 -> 이거 csv 바꿔서, data파일에
     "license": true
 },
 ```
+
+## 각 파일 설명 <br>
+> 폴더 : data <br>
+> ```data :  학습에 필요한 데이터셋을 csv로 변환해둠(현재 sample만 csv로 만들어둠)``` <br>
+> 원본 data는 용량 문제로 업로드 안됌 <br>
+
+
+>  python 파일 : mainT5.py, classT5.py, useClassT5.py, csvView.py, trans-json2csv.py, trans-Trans_json2csv.py <br>
+>  ```mainT5.py : 학습할때 사용하는 T5 모델 코드``` <br>
+>  ```classT5.py : 실제 학습된 T5모델을 가져오기위해 만든 class(그냥 클래스 선언만 있는거)``` <br>
+>  ```useClassT5.py : classT5를 가져와서 실제 사용방법을 보여주는 코드(학습된 가중치들과 편향들을 용량이 커서 업로드 안됌)``` <br>
+>  ```csvView.py : csv파일의 일부를 보여주는 코드(그냥 궁금하면 확인하는 용도)```<br>
+>  ```trans-json2csv.py,  trans-Trans_json2csv.p: 학습 데이터의 원본은 json 파일인데 필요한 부분만 가져와서 csv파일로 변환해주는 파일```<br>
+
+90개의 데이터로 40번 학습 돌렸을때의 결과 (나쁘지않은데 아마 과적합일거임->본 학술제로 들어가는 순간 제대로 학습해야징)
+![image](https://github.com/user-attachments/assets/22a5b23e-3232-4294-9def-18f97164cc2f)
+
+
