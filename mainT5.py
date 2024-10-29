@@ -10,7 +10,7 @@ df123 = pd.read_csv("data/sample_trans.csv")
 df123 = df123.dropna()
 
 #이거 학습 데이터 많으면 오래걸림 줄여야함.
-df = df123.head(20)
+df = df123.head(90)
 
 train_df, val_df = train_test_split(df, test_size=0.1)
 
@@ -67,7 +67,7 @@ training_args = TrainingArguments(
     per_device_train_batch_size=4,  # 배치 크기 줄임
     per_device_eval_batch_size=4,   # 배치 크기 줄임
     output_dir="./results",
-    num_train_epochs=4,  # 에폭을 4로 늘림
+    num_train_epochs=40,  # 에폭을 4로 늘림
     evaluation_strategy="epoch",
     save_strategy="epoch",
     save_total_limit=3,
